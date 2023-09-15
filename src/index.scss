@@ -519,8 +519,10 @@ header {
   line-height: 28px;
 }
 
-a.nav-link a.active {
-  color: #fff !important;
+div.nav-item {
+  a.nav-link, a.active {
+    color: #fff !important;
+  }
 }
 
 div.container-xl {
