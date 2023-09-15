@@ -518,3 +518,11 @@ header {
   font-size: 18px;
   line-height: 28px;
 }
+
+a.nav-link a.active {
+  color: #fff !important;
+}
+
+div.container-xl {
+  flex-direction: inherit !important;
+}
