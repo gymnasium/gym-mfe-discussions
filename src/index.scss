@@ -520,9 +520,10 @@ header {
 }
 
 div.nav-item {
-  a.nav-link, a.active {
+  div.nav-item a.nav-link.active {
     color: #fff !important;
-  }
+}
+
 }
 
 div.container-xl {
