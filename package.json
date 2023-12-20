@@ -33,11 +33,9 @@
     "url": "https://github.com/openedx/frontend-app-discussions/issues"
   },
   "dependencies": {
-    "@edx/brand": "npm:@edx/brand-openedx@1.1.0",
-    "@edx/frontend-component-footer": "12.0.0",
-    "@edx/frontend-component-header": "4.0.3",
-    "@edx/frontend-platform": "4.4.0",
-    "@edx/paragon": "20.15.0",
+    "@edx/frontend-platform": "4.2.0",
+    "@edx/paragon": "20.46.3",
+    "@edx/brand": "github:gymnasium/brand-openedx#gym.palm.4",
     "@reduxjs/toolkit": "1.8.0",
     "@tinymce/tinymce-react": "3.13.1",
     "babel-polyfill": "6.26.0",
@@ -50,19 +48,21 @@
     "raw-loader": "4.0.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-helmet": "6.1.0",
     "react-redux": "7.2.6",
     "react-router": "5.2.1",
     "react-router-dom": "5.3.0",
     "redux": "4.1.2",
     "regenerator-runtime": "0.13.9",
+    "timeago-react": "3.0.6",
     "timeago.js": "4.0.2",
     "tinymce": "5.10.2",
     "yup": "0.31.1"
   },
   "devDependencies": {
-    "@edx/browserslist-config": "1.1.0",
-    "@edx/frontend-build": "12.8.38",
-    "@edx/reactifex": "1.0.3",
+    "@edx/browserslist-config": "1.2.0",
+    "@edx/reactifex": "1.1.0",
+    "@edx/frontend-build": "12.8.6",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.4",
     "@testing-library/user-event": "13.5.0",
@@ -73,5 +73,10 @@
     "husky": "7.0.4",
     "jest": "27.5.1",
     "rosie": "2.1.0"
+  },
+  "overrides": {
+    "@formatjs/ts-transformer": "3.13.12",
+    "sharp": "^0.33.2",
+    "source-map-loader": "5.0.0"
   }
 }

@@ -6,9 +6,6 @@ import {
   Route, Switch, useLocation, useRouteMatch,
 } from 'react-router';
 
-import Footer from '@edx/frontend-component-footer';
-import { LearningHeader as Header } from '@edx/frontend-component-header';
-
 import { PostActionsBar } from '../../components';
 import { CourseTabsNavigation } from '../../components/NavigationBar';
 import { selectCourseTabs } from '../../components/NavigationBar/data/selectors';
@@ -75,56 +72,56 @@ const DiscussionsHome = () => {
       learnerUsername,
     }}
     >
-      {!enableInContextSidebar && <Header courseOrg={org} courseNumber={courseNumber} courseTitle={courseTitle} />}
-      <main className="container-fluid d-flex flex-column p-0 w-100" id="main" tabIndex="-1">
-        {!enableInContextSidebar && <CourseTabsNavigation activeTab="discussion" courseId={courseId} />}
-        <div
-          className={classNames('header-action-bar', {
-            'shadow-none border-light-300 border-bottom': enableInContextSidebar,
-          })}
-          ref={postActionBarRef}
-        >
-          <div
-            className={classNames('d-flex flex-row justify-content-between navbar fixed-top', {
-              'pl-4 pr-3 py-0': enableInContextSidebar,
-            })}
-          >
-            {!enableInContextSidebar && <Route path={Routes.DISCUSSIONS.PATH} component={NavigationBar} />}
-            <PostActionsBar />
-          </div>
-          <BlackoutInformationBanner />
-        </div>
-        {provider === DiscussionProvider.LEGACY && (
-          <Route
-            path={[Routes.POSTS.PATH, Routes.TOPICS.CATEGORY]}
-            component={LegacyBreadcrumbMenu}
-          />
-        )}
+      {/* {!enableInContextSidebar && <Header courseOrg={org} courseNumber={courseNumber} courseTitle={courseTitle} />} */}
 
-        <div className="d-flex flex-row">
-          <DiscussionSidebar displaySidebar={displaySidebar} postActionBarRef={postActionBarRef} />
-          {displayContentArea && <DiscussionContent />}
-          {!displayContentArea && (
-            <Switch>
-              <Route
-                path={Routes.TOPICS.PATH}
-                component={(enableInContext || enableInContextSidebar) ? InContextEmptyTopics : EmptyTopics}
-              />
-              <Route
-                path={Routes.POSTS.MY_POSTS}
-                render={routeProps => <EmptyPosts {...routeProps} subTitleMessage={messages.emptyMyPosts} />}
-              />
-              <Route
-                path={[Routes.POSTS.PATH, Routes.POSTS.ALL_POSTS, Routes.LEARNERS.POSTS]}
-                render={routeProps => <EmptyPosts {...routeProps} subTitleMessage={messages.emptyAllPosts} />}
-              />
-              {isRedirectToLearners && <Route path={Routes.LEARNERS.PATH} component={EmptyLearners} />}
-            </Switch>
-          )}
+      {!enableInContextSidebar && <CourseTabsNavigation activeTab="discussion" courseId={courseId} />}
+      <div
+        className={classNames('header-action-bar', {
+          'shadow-none border-light-300 border-bottom': enableInContextSidebar,
+        })}
+        ref={postActionBarRef}
+      >
+        <div
+          className={classNames('d-flex flex-row justify-content-between navbar fixed-top', {
+            'pl-4 pr-3 py-0': enableInContextSidebar,
+          })}
+        >
+          {!enableInContextSidebar && <Route path={Routes.DISCUSSIONS.PATH} component={NavigationBar} />}
+          <PostActionsBar />
         </div>
-        {!enableInContextSidebar && <DiscussionsProductTour />}
-      </main>
-      {!enableInContextSidebar && <Footer />}
+        <BlackoutInformationBanner />
+      </div>
+      {provider === DiscussionProvider.LEGACY && (
+        <Route
+          path={[Routes.POSTS.PATH, Routes.TOPICS.CATEGORY]}
+          component={LegacyBreadcrumbMenu}
+        />
+      )}
+
+      <div className="d-flex flex-row">
+        <DiscussionSidebar displaySidebar={displaySidebar} postActionBarRef={postActionBarRef} />
+        {displayContentArea && <DiscussionContent />}
+        {!displayContentArea && (
+          <Switch>
+            <Route
+              path={Routes.TOPICS.PATH}
+              component={(enableInContext || enableInContextSidebar) ? InContextEmptyTopics : EmptyTopics}
+            />
+            <Route
+              path={Routes.POSTS.MY_POSTS}
+              render={routeProps => <EmptyPosts {...routeProps} subTitleMessage={messages.emptyMyPosts} />}
+            />
+            <Route
+              path={[Routes.POSTS.PATH, Routes.POSTS.ALL_POSTS, Routes.LEARNERS.POSTS]}
+              render={routeProps => <EmptyPosts {...routeProps} subTitleMessage={messages.emptyAllPosts} />}
+            />
+            {isRedirectToLearners && <Route path={Routes.LEARNERS.PATH} component={EmptyLearners} />}
+          </Switch>
+        )}
+      </div>
+      {!enableInContextSidebar && <DiscussionsProductTour />}
+      {/* {!enableInContextSidebar && <Footer />} */}
+
     </DiscussionContext.Provider>
   );
 };

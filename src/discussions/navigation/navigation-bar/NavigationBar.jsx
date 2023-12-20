@@ -38,7 +38,7 @@ const NavigationBar = ({ intl }) => {
   }
 
   return (
-    <Nav variant="button-group" className="py-2">
+    <Nav variant="tabs" className="py-2">
       {navLinks.map(link => (
         <Nav.Item key={link.route}>
           <Nav.Link
