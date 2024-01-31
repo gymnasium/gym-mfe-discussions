@@ -72,8 +72,6 @@ const DiscussionsHome = () => {
       learnerUsername,
     }}
     >
-      {/* {!enableInContextSidebar && <Header courseOrg={org} courseNumber={courseNumber} courseTitle={courseTitle} />} */}
-
       {!enableInContextSidebar && <CourseTabsNavigation activeTab="discussion" courseId={courseId} />}
       <div
         className={classNames('header-action-bar', {
@@ -120,7 +118,6 @@ const DiscussionsHome = () => {
         )}
       </div>
       {!enableInContextSidebar && <DiscussionsProductTour />}
-      {/* {!enableInContextSidebar && <Footer />} */}
 
     </DiscussionContext.Provider>
   );
