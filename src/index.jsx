@@ -19,7 +19,7 @@ import store from './store';
 import './assets/favicon.ico';
 import './index.scss';
 
-import GymSettings, { GymFooter, GymHeader } from 'gym-frontend-components/';
+import GymSettings, { GymFooter, GymHeader } from './gym-frontend-components/';
 const timestamp = Date.now();
 const settings = await GymSettings;
 const root = settings.urls.root; // should be same as marketing URL

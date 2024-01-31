@@ -9,9 +9,9 @@ config.experiments = {
   topLevelAwait: true
 };
 
-config.resolve.alias =  {
-  'gym-frontend-components': path.resolve(__dirname, '../gym-frontend-components/'),
-};
+// config.resolve.alias =  {
+//   'gym-frontend-components': path.resolve(__dirname, '../gym-frontend-components/'),
+// };
 
 config.resolve.modules = [
   path.resolve(__dirname, './node_modules'),
