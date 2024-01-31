@@ -58,7 +58,7 @@ const Topic = ({
             <OverlayTrigger
               placement="right"
               overlay={(
-                <Tooltip>
+                <Tooltip id="topic-threadcounts-discussion">
                   <div className="d-flex flex-column align-items-start">
                     {intl.formatMessage(messages.discussions, {
                       count: topic.threadCounts?.discussion || 0,
@@ -75,7 +75,7 @@ const Topic = ({
             <OverlayTrigger
               placement="right"
               overlay={(
-                <Tooltip>
+                <Tooltip id="topic-threadcounts-question">
                   <div className="d-flex flex-column align-items-start">
                     {intl.formatMessage(messages.questions, {
                       count: topic.threadCounts?.question || 0,
@@ -93,7 +93,7 @@ const Topic = ({
               <OverlayTrigger
                 placement="right"
                 overlay={(
-                  <Tooltip>
+                  <Tooltip id="topic-messages-reported">
                     <div className="d-flex flex-column align-items-start">
                       {Boolean(activeFlags) && (
                         <span>
