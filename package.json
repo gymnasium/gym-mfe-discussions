@@ -38,6 +38,7 @@
     "@edx/frontend-component-header": "4.3.0",
     "@edx/frontend-platform": "4.6.0",
     "@edx/paragon": "20.44.0",
+    "@edx/gym-frontend": "github:gymnasium/gym-frontend-components#gym.quince.1",
     "@reduxjs/toolkit": "1.8.0",
     "@tinymce/tinymce-react": "3.13.1",
     "babel-polyfill": "6.26.0",
@@ -50,6 +51,7 @@
     "raw-loader": "4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
     "react-redux": "7.2.9",
     "react-router": "5.2.1",
     "react-router-dom": "5.3.0",
@@ -60,8 +62,8 @@
     "yup": "0.31.1"
   },
   "devDependencies": {
-    "@edx/browserslist-config": "1.1.0",
-    "@edx/frontend-build": "12.8.27",
+    "@edx/browserslist-config": "1.2.0",
+    "@edx/frontend-build": "13.0.1",
     "@edx/reactifex": "1.0.3",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.5",
