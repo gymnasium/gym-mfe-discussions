@@ -10,11 +10,10 @@ import {
 } from '@edx/frontend-platform';
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 
-import { DiscussionsHome } from './discussions';
+import { DiscussionsHome } from './gym-discussions';
 import messages from './i18n';
 import store from './store';
 
-import './assets/favicon.ico';
 import './index.scss';
 
 subscribe(APP_READY, () => {
