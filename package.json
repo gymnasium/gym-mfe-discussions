@@ -76,5 +76,8 @@
     "husky": "7.0.4",
     "jest": "27.5.1",
     "rosie": "2.1.0"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.2"
   }
 }
