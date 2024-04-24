@@ -1,7 +1,7 @@
 {
   "name": "@edx/frontend-app-discussions",
-  "version": "0.1.0",
-  "description": "Discussions Frontend",
+  "version": "0.1.0-gym.quince.3",
+  "description": "Gymnasium-specific Discussions MFE",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openedx/frontend-app-discussions.git"
@@ -78,6 +78,6 @@
     "rosie": "2.1.0"
   },
   "optionalDependencies": {
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.3"
   }
 }

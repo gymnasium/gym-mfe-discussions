@@ -13,7 +13,7 @@ import { GymFooter, GymHeader, timestamp } from '@edx/gym-frontend';
 
 const getBaseUrl = () => getConfig().MARKETING_SITE_BASE_URL;
 const getFaviconUrl = () => getConfig().FAVICON_URL;
-const getStyles = () => `${getBaseUrl()}/css/mfe.css?${timestamp}`;
+const getStyles = () => `${getBaseUrl()}/css/mfe-discussions.css?${timestamp}`;
 
 import { Spinner } from '../../components';
 import { selectCourseTabs } from '../../components/NavigationBar/data/selectors';
