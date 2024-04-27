@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-app-discussions",
-  "version": "0.1.1-gym.quince.3",
+  "version": "0.1.2-gym.quince.3",
   "description": "Gymnasium-specific Discussions MFE",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "@tinymce/tinymce-react": "3.13.1",
     "babel-polyfill": "6.26.0",
     "classnames": "2.3.1",
-    "core-js": "3.21.1",
+    "core-js": "3.37.0",
     "dompurify": "^3.1.0",
     "formik": "2.2.9",
     "lodash.snakecase": "4.1.1",
@@ -78,6 +78,11 @@
     "rosie": "2.1.0"
   },
   "optionalDependencies": {
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.3",
+    "@img/sharp-linux-x64": "^0.33.3",
+    "@img/sharp-linux-arm64": "^0.33.3",
+    "@img/sharp-win32-x64": "^0.33.3",
+    "@img/sharp-darwin-arm64": "^0.33.3",
+    "@img/sharp-darwin-x64": "^0.33.3"
   }
 }
