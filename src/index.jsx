@@ -15,7 +15,7 @@ import { DiscussionsHome } from './discussions';
 import messages from './i18n';
 import store from './store';
 
-import './index.scss';
+import './GymApp.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
