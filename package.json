@@ -1,7 +1,7 @@
 {
   "name": "@edx/frontend-app-discussions",
-  "version": "0.1.0",
-  "description": "Discussions Frontend",
+  "version": "0.1.0-gym.redwood",
+  "description": "Gymnasium-specific Discussions Frontend",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openedx/frontend-app-discussions.git"
@@ -35,16 +35,18 @@
   "dependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/frontend-component-header": "^5.0.2",
-    "@edx/frontend-platform": "^7.1.0",
+    "@edx/frontend-platform": "^8.0.0",
     "@edx/openedx-atlas": "^0.6.0",
+    "@openedx/frontend-plugin-framework": "^1.1.2",
     "@openedx/frontend-slot-footer": "^1.0.2",
-    "@openedx/paragon": "^22.1.1",
+    "@openedx/gym-frontend": "git+https://git@github.com/gymnasium/gym-frontend-components.git#main",
+    "@openedx/paragon": "^22.3.0",
     "@reduxjs/toolkit": "1.9.7",
     "@tinymce/tinymce-react": "3.13.1",
     "babel-polyfill": "6.26.0",
     "classnames": "2.5.1",
-    "core-js": "3.21.1",
-    "dompurify": "^2.4.3",
+    "core-js": "3.37.1",
+    "dompurify": "^3.1.6",
     "formik": "2.4.5",
     "lodash.snakecase": "4.1.1",
     "prop-types": "15.8.1",
@@ -63,8 +65,8 @@
   },
   "devDependencies": {
     "@edx/browserslist-config": "1.2.0",
-    "@edx/reactifex": "1.1.0",
-    "@openedx/frontend-build": "^13.0.28",
+    "@edx/reactifex": "2.2.0",
+    "@openedx/frontend-build": "^14.0.14",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "13.5.0",
