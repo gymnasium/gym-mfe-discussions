@@ -8,7 +8,7 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 import Tabs from './tabs/Tabs';
 import messages from './messages';
 
-import './navBar.scss';
+// import './navBar.scss';
 
 const CourseTabsNavigation = () => {
   const intl = useIntl();

@@ -19,7 +19,7 @@ import { postMessageToParent } from '../../utils';
 import { showPostEditor } from '../data';
 import messages from './messages';
 
-import './actionBar.scss';
+// import './actionBar.scss';
 
 const PostActionsBar = () => {
   const intl = useIntl();
