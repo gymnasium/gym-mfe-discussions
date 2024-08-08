@@ -73,6 +73,16 @@
 @import "~@openedx/paragon/src/ColorPicker";
 
 
+// Hide everything until our external CSS loads.
+html {
+  background-color: var(--mono-200);
+}
+
+#root {
+  display: none;
+}
+
+
 #post,
 #comment,
 #reply,
