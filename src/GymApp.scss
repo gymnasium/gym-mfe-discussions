@@ -1,3 +1,5 @@
+// @use "~@openedx/paragon/src/Button" as *;
+
 @import "~@openedx/paragon/scss/core/functions";
 @import "~@openedx/paragon/scss/core/variables";
 @import "~bootstrap/scss/mixins";
@@ -96,11 +98,11 @@ html {
 }
 
 .text-staff-color {
-  color: $warning-700;
+  color: var(--mono-700);
 }
 
 .outline-staff-color {
-  outline: $warning-700 solid 2px;
+  outline: var(--mono-700) solid 2px;
 }
 
 .text-TA-color {
