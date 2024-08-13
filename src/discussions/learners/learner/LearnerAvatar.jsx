@@ -8,10 +8,6 @@ const LearnerAvatar = ({ username }) => (
     <Avatar
       size="sm"
       alt={username}
-      style={{
-        height: '2rem',
-        width: '2rem',
-      }}
     />
   </div>
 );
