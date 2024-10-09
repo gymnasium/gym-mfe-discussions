@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-app-discussions",
-  "version": "0.1.0-gym.redwood",
+  "version": "0.1.1-gym.redwood",
   "description": "Gymnasium-specific Discussions Frontend",
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/frontend-platform": "^7.0.0",
     "@edx/openedx-atlas": "^0.6.0",
+    "@intercom/messenger-js-sdk": "^0.0.14",
     "@openedx/frontend-plugin-framework": "^1.1.2",
     "@openedx/gym-frontend": "git+https://git@github.com/gymnasium/gym-frontend-components.git#main",
     "@openedx/paragon": "^22.3.0",

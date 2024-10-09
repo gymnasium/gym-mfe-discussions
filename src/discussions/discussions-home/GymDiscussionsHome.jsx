@@ -2,6 +2,10 @@ import React, {
   lazy, Suspense, useMemo, useRef,
 } from 'react';
 
+import { getConfig } from '@edx/frontend-platform';
+import { logError } from '@edx/frontend-platform/logging';
+import { getAuthenticatedUser } from '@edx/frontend-platform/auth';
+
 import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 import {
@@ -26,6 +30,10 @@ import { isCourseStatusValid } from '../utils';
 import useFeedbackWrapper from './FeedbackWrapper';
 
 import { GymFooter as FooterSlot, GymHeader } from '@openedx/gym-frontend';
+
+import {Intercom, boot, update } from "@intercom/messenger-js-sdk";
+
+const INTERCOM_APP_ID = () => getConfig().INTERCOM_APP_ID;
 
 // const FooterSlot = lazy(() => import('@openedx/frontend-slot-footer'));
 const PostActionsBar = lazy(() => import('../posts/post-actions-bar/PostActionsBar'));
@@ -77,6 +85,21 @@ const DiscussionsHome = () => {
     category,
     learnerUsername,
   }));
+
+  if (INTERCOM_APP_ID()) {
+    try {
+      Intercom({app_id: INTERCOM_APP_ID()});
+
+      const INTERCOM_SETTINGS = {
+        email: getAuthenticatedUser()?.email,
+        user_id: getAuthenticatedUser()?.username,
+      }
+
+      update(INTERCOM_SETTINGS);
+    } catch (error) {
+      logError(error);
+    }
+  }
 
   return (
     <Suspense fallback={(<Spinner />)}>
