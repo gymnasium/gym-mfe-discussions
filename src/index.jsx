@@ -8,12 +8,13 @@ import {
   APP_INIT_ERROR, APP_READY, initialize, mergeConfig,
   subscribe,
 } from '@edx/frontend-platform';
-import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
+import { AppProvider } from '@edx/frontend-platform/react';
 
 import Head from './components/Head/Head';
 import { DiscussionsHome } from './discussions';
 import messages from './i18n';
 import store from './store';
+import { ErrorPage } from '@openedx/gym-frontend';
 
 import './GymApp.scss';
 
