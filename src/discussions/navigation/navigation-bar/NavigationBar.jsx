@@ -11,13 +11,17 @@ import { discussionsPath } from '../../utils';
 import messages from './messages';
 import { slugify } from '@openedx/gym-frontend';
 
+import {
+  selectUserIsStaff,
+} from '../../data/selectors';
+
 const NavigationBar = () => {
   const intl = useIntl();
   const { courseId } = useContext(DiscussionContext);
   const location = useLocation();
   const isTopicsNavActive = Boolean(matchPath({ path: `${Routes.TOPICS.CATEGORY}/*` }, location.pathname));
 
-  const navLinks = useMemo(() => ([
+  let NAVLINKS = [
     {
       route: Routes.POSTS.MY_POSTS,
       labelMessage: messages.myPosts,
@@ -33,13 +37,18 @@ const NavigationBar = () => {
       labelMessage: messages.allTopics,
       className: slugify(messages.allTopics.defaultMessage),
     },
-    {
+  ]
+
+  // Show "Learners" tab only for staff
+  if (selectUserIsStaff) {
+    NAVLINKS.push({
       route: Routes.LEARNERS.PATH,
       labelMessage: messages.learners,
       className: slugify(messages.learners.defaultMessage),
-    },
+    })
+  }
 
-  ]), []);
+  const navLinks = useMemo(() => (NAVLINKS), []);
 
   return (
     <Nav variant="pills" className="py-2 nav-button-group">
