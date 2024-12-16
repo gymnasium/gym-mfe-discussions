@@ -95,9 +95,7 @@ const PostLink = ({
                 >
                   {title}
                 </span>
-                <span className="text-gray-700 font-weight-normal font-size-14 font-style align-bottom">
-                  {isPostPreviewAvailable(previewBody) ? previewBody : intl.formatMessage(messages.postWithoutPreview)}
-                </span>
+                <span className="text-gray-700 font-weight-normal font-size-14 font-style align-bottom" dangerouslySetInnerHTML={{ __html: isPostPreviewAvailable(previewBody) ? previewBody : intl.formatMessage(messages.postWithoutPreview)}} />
               </div>
               {showAnsweredBadge && (
                 <Icon
